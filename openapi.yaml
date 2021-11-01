@@ -1,0 +1,130 @@
+openapi: 3.0.0
+info:
+  title: nhentai api
+  version: 0.1.0
+paths:
+  /api/galleries/{id}:
+    get:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        200:
+          description: Gallery
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/gallery"
+        400:
+          $ref: "#/components/responses/bad_request"
+  /api/galleries/search:
+    get:
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: number
+        - name: sort
+          in: query
+          schema:
+            enum:
+              - popular
+              - popular-year
+              - popular-month
+              - popular-week
+              - popular-today
+              - date
+      responses:
+        200:
+          description: Gallery page
+          content:
+            application/json:
+              schema:
+                properties:
+                  num_pages:
+                    type: number
+                  per_page:
+                    type: number
+                  results:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/gallery"
+        400:
+          $ref: "#/components/responses/bad_request"
+components:
+  schemas:
+    gallery:
+      properties:
+        id:
+          type: number
+        media_id:
+          type: number
+        title:
+          type: object
+          additionalProperties:
+            type: string
+        images:
+          type: array
+          items:
+            type: object
+            properties:
+              pages:
+                type: array
+                items:
+                  $ref: "#/components/schemas/image"
+              cover:
+                $ref: "#/components/schemas/image"
+              thumbnail:
+                $ref: "#/components/schemas/image"
+        scanlator:
+          type: string
+        upload_date:
+          type: number
+        tags:
+          type: array
+          items:
+            $ref: "#/components/schemas/tag"
+        num_pages:
+          type: number
+        num_favorites:
+          type: number
+    image:
+      properties:
+        t:
+          type: string
+        w:
+          type: number
+        h:
+          type: number
+    tag:
+      properties:
+        id:
+          type: number
+        type:
+          type: string
+        name:
+          type: string
+        url:
+          type: string
+        count:
+          type: number
+  responses:
+    bad_request:
+      description: Bad Request
+      content:
+        "application/json":
+          schema:
+            type: object
+            properties:
+              error:
+                properties:
+                  error:
+                    type: boolean
