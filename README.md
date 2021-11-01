@@ -52,6 +52,7 @@ from pprint import pprint
 from nhentai_api.api import default_api
 from nhentai_api.model.gallery import Gallery
 from nhentai_api.model.inline_response400 import InlineResponse400
+from nhentai_api.model.sort_mode import SortMode
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = nhentai_api.Configuration(
@@ -89,6 +90,8 @@ Class | Method | HTTP request | Description
  - [GalleryImages](docs/GalleryImages.md)
  - [Image](docs/Image.md)
  - [InlineResponse400](docs/InlineResponse400.md)
+ - [SearchResult](docs/SearchResult.md)
+ - [SortMode](docs/SortMode.md)
  - [Tag](docs/Tag.md)
 
 

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import nhentai-api
-from nhentai-api.model.image import Image
+import nhentai_api
+from nhentai_api.model.image import Image
 globals()['Image'] = Image
-from nhentai-api.model.gallery_images import GalleryImages
+from nhentai_api.model.gallery_images import GalleryImages
 
 
 class TestGalleryImages(unittest.TestCase):

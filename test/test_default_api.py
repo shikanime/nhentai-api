@@ -10,8 +10,8 @@
 
 import unittest
 
-import nhentai-api
-from nhentai-api.api.default_api import DefaultApi  # noqa: E501
+import nhentai_api
+from nhentai_api.api.default_api import DefaultApi  # noqa: E501
 
 
 class TestDefaultApi(unittest.TestCase):

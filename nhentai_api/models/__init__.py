@@ -13,4 +13,6 @@ from nhentai_api.model.gallery import Gallery
 from nhentai_api.model.gallery_images import GalleryImages
 from nhentai_api.model.image import Image
 from nhentai_api.model.inline_response400 import InlineResponse400
+from nhentai_api.model.search_result import SearchResult
+from nhentai_api.model.sort_mode import SortMode
 from nhentai_api.model.tag import Tag

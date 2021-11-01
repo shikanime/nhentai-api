@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import nhentai-api
-from nhentai-api.model.inline_response400 import InlineResponse400
+import nhentai_api
+from nhentai_api.model.inline_response400 import InlineResponse400
 
 
 class TestInlineResponse400(unittest.TestCase):

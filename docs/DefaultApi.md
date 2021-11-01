@@ -84,6 +84,7 @@ import time
 import nhentai_api
 from nhentai_api.api import default_api
 from nhentai_api.model.inline_response400 import InlineResponse400
+from nhentai_api.model.sort_mode import SortMode
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -98,7 +99,7 @@ with nhentai_api.ApiClient() as api_client:
     api_instance = default_api.DefaultApi(api_client)
     query = "query_example" # str | 
     page = 3.14 # float |  (optional)
-    sort = "popular" # str |  (optional)
+    sort = SortMode("popular") # SortMode |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -123,7 +124,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **str**|  |
  **page** | **float**|  | [optional]
- **sort** | **str**|  | [optional]
+ **sort** | **SortMode**|  | [optional]
 
 ### Return type
 
@@ -142,7 +143,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gallery page |  -  |
+**200** | Gallery search result |  -  |
 **400** | Bad Request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

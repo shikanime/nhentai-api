@@ -23,6 +23,7 @@ from nhentai_api.model_utils import (  # noqa: F401
 )
 from nhentai_api.model.gallery import Gallery
 from nhentai_api.model.inline_response400 import InlineResponse400
+from nhentai_api.model.sort_mode import SortMode
 
 
 class DefaultApi(object):
@@ -171,7 +172,7 @@ class DefaultApi(object):
 
             Keyword Args:
                 page (float): [optional]
-                sort (str): [optional]
+                sort (SortMode): [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -241,7 +242,6 @@ class DefaultApi(object):
                 'nullable': [
                 ],
                 'enum': [
-                    'sort',
                 ],
                 'validation': [
                 ]
@@ -250,15 +250,6 @@ class DefaultApi(object):
                 'validations': {
                 },
                 'allowed_values': {
-                    ('sort',): {
-
-                        "POPULAR": "popular",
-                        "POPULAR-YEAR": "popular-year",
-                        "POPULAR-MONTH": "popular-month",
-                        "POPULAR-WEEK": "popular-week",
-                        "POPULAR-TODAY": "popular-today",
-                        "DATE": "date"
-                    },
                 },
                 'openapi_types': {
                     'query':
@@ -266,7 +257,7 @@ class DefaultApi(object):
                     'page':
                         (float,),
                     'sort':
-                        (str,),
+                        (SortMode,),
                 },
                 'attribute_map': {
                     'query': 'query',

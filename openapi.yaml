@@ -17,9 +17,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/gallery"
+                $ref: "#/components/schemas/Gallery"
         400:
-          $ref: "#/components/responses/bad_request"
+          $ref: "#/components/responses/BadRequest"
   /api/galleries/search:
     get:
       parameters:
@@ -35,33 +35,42 @@ paths:
         - name: sort
           in: query
           schema:
-            enum:
-              - popular
-              - popular-year
-              - popular-month
-              - popular-week
-              - popular-today
-              - date
+            $ref: "#/components/schemas/SortMode"
       responses:
         200:
-          description: Gallery page
+          description: Gallery search result
           content:
             application/json:
               schema:
-                properties:
-                  num_pages:
-                    type: number
-                  per_page:
-                    type: number
-                  results:
-                    type: array
-                    items:
-                      $ref: "#/components/schemas/gallery"
+                anyOf:
+                  - $ref: "#/components/schemas/SearchResult"
+                  - type: object
+                    properties:
+                      results:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Gallery"
         400:
-          $ref: "#/components/responses/bad_request"
+          $ref: "#/components/responses/BadRequest"
 components:
   schemas:
-    gallery:
+    SortMode:
+      enum:
+        - popular
+        - popular-year
+        - popular-month
+        - popular-week
+        - popular-today
+        - date
+    SearchResult:
+      properties:
+        num_pages:
+          type: number
+        per_page:
+          type: number
+        results:
+          type: object
+    Gallery:
       properties:
         id:
           type: number
@@ -79,11 +88,11 @@ components:
               pages:
                 type: array
                 items:
-                  $ref: "#/components/schemas/image"
+                  $ref: "#/components/schemas/Image"
               cover:
-                $ref: "#/components/schemas/image"
+                $ref: "#/components/schemas/Image"
               thumbnail:
-                $ref: "#/components/schemas/image"
+                $ref: "#/components/schemas/Image"
         scanlator:
           type: string
         upload_date:
@@ -91,12 +100,12 @@ components:
         tags:
           type: array
           items:
-            $ref: "#/components/schemas/tag"
+            $ref: "#/components/schemas/Tag"
         num_pages:
           type: number
         num_favorites:
           type: number
-    image:
+    Image:
       properties:
         t:
           type: string
@@ -104,7 +113,7 @@ components:
           type: number
         h:
           type: number
-    tag:
+    Tag:
       properties:
         id:
           type: number
@@ -117,7 +126,7 @@ components:
         count:
           type: number
   responses:
-    bad_request:
+    BadRequest:
       description: Bad Request
       content:
         "application/json":

@@ -7,6 +7,8 @@ docs/Gallery.md
 docs/GalleryImages.md
 docs/Image.md
 docs/InlineResponse400.md
+docs/SearchResult.md
+docs/SortMode.md
 docs/Tag.md
 git_push.sh
 nhentai_api/__init__.py
@@ -21,6 +23,8 @@ nhentai_api/model/gallery.py
 nhentai_api/model/gallery_images.py
 nhentai_api/model/image.py
 nhentai_api/model/inline_response400.py
+nhentai_api/model/search_result.py
+nhentai_api/model/sort_mode.py
 nhentai_api/model/tag.py
 nhentai_api/model_utils.py
 nhentai_api/models/__init__.py
@@ -30,4 +34,12 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_default_api.py
+test/test_gallery.py
+test/test_gallery_images.py
+test/test_image.py
+test/test_inline_response400.py
+test/test_search_result.py
+test/test_sort_mode.py
+test/test_tag.py
 tox.ini

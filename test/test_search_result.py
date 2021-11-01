@@ -12,11 +12,11 @@ import sys
 import unittest
 
 import nhentai_api
-from nhentai_api.model.image import Image
+from nhentai_api.model.search_result import SearchResult
 
 
-class TestImage(unittest.TestCase):
-    """Image unit test stubs"""
+class TestSearchResult(unittest.TestCase):
+    """SearchResult unit test stubs"""
 
     def setUp(self):
         pass
@@ -24,10 +24,10 @@ class TestImage(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testImage(self):
-        """Test Image"""
+    def testSearchResult(self):
+        """Test SearchResult"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = Image()  # noqa: E501
+        # model = SearchResult()  # noqa: E501
         pass
 
 

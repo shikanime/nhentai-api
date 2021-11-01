@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import nhentai-api
-from nhentai-api.model.tag import Tag
+import nhentai_api
+from nhentai_api.model.tag import Tag
 
 
 class TestTag(unittest.TestCase):

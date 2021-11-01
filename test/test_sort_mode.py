@@ -12,11 +12,11 @@ import sys
 import unittest
 
 import nhentai_api
-from nhentai_api.model.image import Image
+from nhentai_api.model.sort_mode import SortMode
 
 
-class TestImage(unittest.TestCase):
-    """Image unit test stubs"""
+class TestSortMode(unittest.TestCase):
+    """SortMode unit test stubs"""
 
     def setUp(self):
         pass
@@ -24,10 +24,10 @@ class TestImage(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testImage(self):
-        """Test Image"""
+    def testSortMode(self):
+        """Test SortMode"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = Image()  # noqa: E501
+        # model = SortMode()  # noqa: E501
         pass
 
 
