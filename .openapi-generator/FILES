@@ -34,12 +34,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_default_api.py
-test/test_gallery.py
-test/test_gallery_images.py
-test/test_image.py
-test/test_inline_response400.py
-test/test_search_result.py
-test/test_sort_mode.py
-test/test_tag.py
 tox.ini

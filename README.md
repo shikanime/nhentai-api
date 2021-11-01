@@ -53,10 +53,10 @@ from nhentai_api.api import default_api
 from nhentai_api.model.gallery import Gallery
 from nhentai_api.model.inline_response400 import InlineResponse400
 from nhentai_api.model.sort_mode import SortMode
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://nhentai.net
 # See configuration.py for a list of all supported configuration parameters.
 configuration = nhentai_api.Configuration(
-    host = "http://localhost"
+    host = "https://nhentai.net"
 )
 
 
@@ -76,7 +76,7 @@ with nhentai_api.ApiClient(configuration) as api_client:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://nhentai.net*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
