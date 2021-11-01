@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from nhentai-api.api_client import ApiClient, Endpoint as _Endpoint
-from nhentai-api.model_utils import (  # noqa: F401
+from nhentai_api.api_client import ApiClient, Endpoint as _Endpoint
+from nhentai_api.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,8 +21,8 @@ from nhentai-api.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from nhentai-api.model.gallery import Gallery
-from nhentai-api.model.inline_response400 import InlineResponse400
+from nhentai_api.model.gallery import Gallery
+from nhentai_api.model.inline_response400 import InlineResponse400
 
 
 class DefaultApi(object):

@@ -23,7 +23,7 @@ pip install git+https://github.com/Shikanime/nhentai-api.git
 
 Then import the package:
 ```python
-import nhentai-api
+import nhentai_api
 ```
 
 ### Setuptools
@@ -37,7 +37,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import nhentai-api
+import nhentai_api
 ```
 
 ## Getting Started
@@ -47,21 +47,21 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import nhentai-api
+import nhentai_api
 from pprint import pprint
-from nhentai-api.api import default_api
-from nhentai-api.model.gallery import Gallery
-from nhentai-api.model.inline_response400 import InlineResponse400
+from nhentai_api.api import default_api
+from nhentai_api.model.gallery import Gallery
+from nhentai_api.model.inline_response400 import InlineResponse400
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = nhentai-api.Configuration(
+configuration = nhentai_api.Configuration(
     host = "http://localhost"
 )
 
 
 
 # Enter a context with an instance of the API client
-with nhentai-api.ApiClient(configuration) as api_client:
+with nhentai_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
     id = 3.14 # float | 
@@ -69,7 +69,7 @@ with nhentai-api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_galleries_id_get(id)
         pprint(api_response)
-    except nhentai-api.ApiException as e:
+    except nhentai_api.ApiException as e:
         print("Exception when calling DefaultApi->api_galleries_id_get: %s\n" % e)
 ```
 
@@ -102,21 +102,21 @@ Class | Method | HTTP request | Description
 
 
 ## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in nhentai-api.apis and nhentai-api.models may fail with a
+If the OpenAPI document is large, imports in nhentai_api.apis and nhentai_api.models may fail with a
 RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from nhentai-api.api.default_api import DefaultApi`
-- `from nhentai-api.model.pet import Pet`
+- `from nhentai_api.api.default_api import DefaultApi`
+- `from nhentai_api.model.pet import Pet`
 
 Solution 2:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
 sys.setrecursionlimit(1500)
-import nhentai-api
-from nhentai-api.apis import *
-from nhentai-api.models import *
+import nhentai_api
+from nhentai_api.apis import *
+from nhentai_api.models import *
 ```
 

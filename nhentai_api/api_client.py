@@ -20,10 +20,10 @@ from urllib.parse import quote
 from urllib3.fields import RequestField
 
 
-from nhentai-api import rest
-from nhentai-api.configuration import Configuration
-from nhentai-api.exceptions import ApiTypeError, ApiValueError, ApiException
-from nhentai-api.model_utils import (
+from nhentai_api import rest
+from nhentai_api.configuration import Configuration
+from nhentai_api.exceptions import ApiTypeError, ApiValueError, ApiException
+from nhentai_api.model_utils import (
     ModelNormal,
     ModelSimple,
     ModelComposed,

@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from nhentai-api.model_utils import (  # noqa: F401
+from nhentai_api.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -26,7 +26,7 @@ from nhentai-api.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 from ..model_utils import OpenApiModel
-from nhentai-api.exceptions import ApiAttributeError
+from nhentai_api.exceptions import ApiAttributeError
 
 
 

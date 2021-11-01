@@ -1,4 +1,4 @@
-# nhentai-api.DefaultApi
+# nhentai_api.DefaultApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,20 +17,20 @@ Method | HTTP request | Description
 
 ```python
 import time
-import nhentai-api
-from nhentai-api.api import default_api
-from nhentai-api.model.gallery import Gallery
-from nhentai-api.model.inline_response400 import InlineResponse400
+import nhentai_api
+from nhentai_api.api import default_api
+from nhentai_api.model.inline_response400 import InlineResponse400
+from nhentai_api.model.gallery import Gallery
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = nhentai-api.Configuration(
+configuration = nhentai_api.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with nhentai-api.ApiClient() as api_client:
+with nhentai_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
     id = 3.14 # float | 
@@ -39,7 +39,7 @@ with nhentai-api.ApiClient() as api_client:
     try:
         api_response = api_instance.api_galleries_id_get(id)
         pprint(api_response)
-    except nhentai-api.ApiException as e:
+    except nhentai_api.ApiException as e:
         print("Exception when calling DefaultApi->api_galleries_id_get: %s\n" % e)
 ```
 
@@ -81,19 +81,19 @@ No authorization required
 
 ```python
 import time
-import nhentai-api
-from nhentai-api.api import default_api
-from nhentai-api.model.inline_response400 import InlineResponse400
+import nhentai_api
+from nhentai_api.api import default_api
+from nhentai_api.model.inline_response400 import InlineResponse400
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = nhentai-api.Configuration(
+configuration = nhentai_api.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with nhentai-api.ApiClient() as api_client:
+with nhentai_api.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
     query = "query_example" # str | 
@@ -104,7 +104,7 @@ with nhentai-api.ApiClient() as api_client:
     try:
         api_response = api_instance.api_galleries_search_get(query)
         pprint(api_response)
-    except nhentai-api.ApiException as e:
+    except nhentai_api.ApiException as e:
         print("Exception when calling DefaultApi->api_galleries_search_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -112,7 +112,7 @@ with nhentai-api.ApiClient() as api_client:
     try:
         api_response = api_instance.api_galleries_search_get(query, page=page, sort=sort)
         pprint(api_response)
-    except nhentai-api.ApiException as e:
+    except nhentai_api.ApiException as e:
         print("Exception when calling DefaultApi->api_galleries_search_get: %s\n" % e)
 ```
 

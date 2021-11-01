@@ -18,7 +18,7 @@ import tempfile
 
 from dateutil.parser import parse
 
-from nhentai-api.exceptions import (
+from nhentai_api.exceptions import (
     ApiKeyError,
     ApiAttributeError,
     ApiTypeError,

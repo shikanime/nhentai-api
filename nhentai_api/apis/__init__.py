@@ -14,4 +14,4 @@
 #   sys.setrecursionlimit(n)
 
 # Import APIs into API package:
-from nhentai-api.api.default_api import DefaultApi
+from nhentai_api.api.default_api import DefaultApi
